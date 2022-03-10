@@ -22,10 +22,10 @@ int	main(int ac, char **av)
 	if (ac == 1)
 		return (1);
 	if (!check_notnb(av, ac) || !fill_list(ac, av, &a))
-{
-		ft_degage(&a);		
+	{
+		ft_degage(&a);
 		return (ft_printf("Error\n"));
-}
+	}
 	if (is_tried(&a) || ft_strlenlist(&a) < 2)
 		return (ft_degage(&a));
 	if (ft_strlenlist(&a) > 2)
