@@ -29,23 +29,19 @@ void	list_run(t_pile **a, t_pile **b, t_pile *high)
 void	ft_run_r(t_pile **a, t_pile **b, t_pile *high)
 {
 	t_pile	*tmp;
-	t_pile	*t;
 
 	tmp = *b;
 	while (tmp->next && tmp != high)
 		rotate(b, 'b');
 	if (tmp == high)
 	{
-		t = *b;
 		push_t_pile(b, a, 'a');
-		free(t);
 	}
 }
 
 void	ft_run_rr(t_pile **a, t_pile **b, t_pile *high)
 {
 	t_pile	*tmp;
-	t_pile	*t;
 
 	tmp = *b;
 	while (tmp != high && tmp->next)
@@ -53,9 +49,7 @@ void	ft_run_rr(t_pile **a, t_pile **b, t_pile *high)
 		tmp = *b;
 		if (tmp == high)
 		{
-			t = *b;
 			push_t_pile(b, a, 'a');
-			free(t);
 			return ;
 		}
 		reverse_rotate(b, 'b');

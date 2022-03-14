@@ -58,7 +58,6 @@ void	begin_median(t_pile **a, t_pile **b)
 	if ((*a)->content == i)
 	{
 		rotate(a, 'a');
-		free(str);
 		return ;
 	}
 	while (j < ft_strlenlist(a))
@@ -69,7 +68,6 @@ void	begin_median(t_pile **a, t_pile **b)
 			rotate(a, 'a');
 		j++;
 	}
-	free(str);
 }
 
 int	trie_tab(char **str, t_pile **a)
@@ -116,17 +114,3 @@ int	ft_return(t_pile **a, char **str)
 	}
 	return (i);
 }
-/*
-char	**ft_free_table(char **str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		free(str[i]);
-		i++;
-	}
-	free(str);
-	return (NULL);
-}*/

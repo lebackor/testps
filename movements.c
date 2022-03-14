@@ -42,16 +42,18 @@ void	push_t_pile(t_pile **stack1, t_pile **stack2, char c)
 	if (!*stack2)
 	{
 		*stack2 = create_liste((*stack1)->content);
-		(*stack1) = (*stack1)->next;
-		free(tmp);
+		(*stack1) = (*stack1)->next;	
+		if (tmp != NULL)
+			free(tmp);
 		if (c == 'a')
 			ft_printf("pa\n");
 		else if (c == 'b')
 			ft_printf("pb\n");
 		return ;
 	}
-	ft_put_begin(stack1, stack2);
-	free(tmp);
+	ft_put_begin(stack1, stack2);	
+	if (tmp != NULL)
+		free(tmp);
 	if (c == 'a')
 		ft_printf("pa\n");
 	else if (c == 'b')
