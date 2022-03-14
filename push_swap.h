@@ -28,7 +28,7 @@ int		check_duplicates_or_limits(t_pile *liste);
 int		is_sorted(t_pile *liste);
 void	swap_x(t_pile **stack, char c);
 void	push_t_pile(t_pile **stack1, t_pile **stack2, char c);
-void	print_liste(t_pile *test);
+void	print_liste(t_pile **test);
 void	rotate(t_pile **stack, char c);
 void	reverse_rotate(t_pile **stack, char c);
 void	swap_ss(t_pile **a, t_pile **b, char c);

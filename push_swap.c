@@ -106,3 +106,15 @@ int	ft_degage(t_pile **a)
 	}
 	return (1);
 }
+/*
+void	print_liste(t_pile **a)
+{
+	t_pile *b;
+
+	b = *a;
+	while (b)
+	{
+		ft_printf("%d ", b->content);
+		b = b->next;
+	}
+}*/

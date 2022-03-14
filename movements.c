@@ -42,7 +42,7 @@ void	push_t_pile(t_pile **stack1, t_pile **stack2, char c)
 	if (!*stack2)
 	{
 		*stack2 = create_liste((*stack1)->content);
-		(*stack1) = (*stack1)->next;	
+		(*stack1) = (*stack1)->next;
 		if (tmp != NULL)
 			free(tmp);
 		if (c == 'a')
@@ -51,7 +51,7 @@ void	push_t_pile(t_pile **stack1, t_pile **stack2, char c)
 			ft_printf("pb\n");
 		return ;
 	}
-	ft_put_begin(stack1, stack2);	
+	ft_put_begin(stack1, stack2);
 	if (tmp != NULL)
 		free(tmp);
 	if (c == 'a')
