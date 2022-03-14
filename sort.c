@@ -6,7 +6,7 @@
 /*   By: lebackor <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:34:13 by lebackor          #+#    #+#             */
-/*   Updated: 2022/03/07 17:46:29 by lebackor         ###   ########.fr       */
+/*   Updated: 2022/03/14 14:39:01 by lebackor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,14 @@ char	**ft_put_tab(t_pile **a)
 
 	tmp = *a;
 	i = 0;
-	str = malloc(sizeof(char *) * ft_strlenlist(a) + 2);
-	while (tmp->next)
+	str = malloc(sizeof(char *) * (ft_strlenlist(a) + 2));
+	while (tmp)
 	{
 		str[i] = ft_itoa(tmp->content);
 		tmp = tmp->next;
 		i++;
 	}
-	if ((tmp->content && tmp->next == NULL)
-		|| (tmp->next == NULL && tmp->content == 0))
-	{
-		str[i] = ft_itoa(tmp->content);
-		str[++i] = NULL;
-		return (str);
-	}
-	str[++i] = NULL;
+	str[i] = NULL;
 	return (str);
 }
 

@@ -6,7 +6,7 @@
 /*   By: lebackor <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:36:56 by lebackor          #+#    #+#             */
-/*   Updated: 2022/03/07 18:41:19 by lebackor         ###   ########.fr       */
+/*   Updated: 2022/03/14 14:13:54 by lebackor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ int	ft_degage(t_pile **a)
 			(*a) = (tmp);
 		}
 	}
-	return (1);
+	return (0);
 }
 /*
 void	print_liste(t_pile **a)

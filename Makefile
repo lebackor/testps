@@ -1,4 +1,14 @@
-
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: lebackor <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/03/14 14:39:49 by lebackor          #+#    #+#              #
+#    Updated: 2022/03/14 14:39:51 by lebackor         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 SRCS	=	check_errors.c\
 			liste_chaine.c\
@@ -13,7 +23,7 @@ OBJS = ${SRCS:.c=.o}
 
 CC	=	gcc
 
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra -g -fsanitize=address
 LDFLAGS = -L libft -lft
 
 NAME = push_swap
